@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>DIY Security System</h1>
+    <p class="lead">DIY Security System REST Server based on Python Flask</p>
+    <p><a href="http://flask.pocoo.org/" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Control</h2>
+        <p>
+            Porch Lights
+        </p>
+        <p id="light_status">Lights is</p>
+        <p>
+            <a id="button_light1_on" class="btn btn-default">Light 1 ON</a>
+            <a id="button_light1_off" class="btn btn-default">Light 1 OFF</a>
+            <br>
+            <a id="button_light2_on" class="btn btn-default">Light 2 ON</a>
+            <a id="button_light2_off" class="btn btn-default">Light 2 OFF</a>
+        </p>
+        <p></p>
+    </div>
+    <div class="col-md-4">
+        <h2>To Do</h2>
+        <p>There are a number of things to do here</p>
+        <ul>
+            <li>Add Some type of security</li>
+            <li>Add Database Integration</li>
+            <li>Add MQTT Alerts and integration with remote apps</li>
+            <li>Add timeout for the sensor data to get missed data alerts</li>
+            <li>Add integration for NVR</li>
+        </ul>
+        <!-- <p><a class="btn btn-default" href="https://pypi.python.org/pypi">Learn more &raquo;</a></p> -->
+    </div>
+    <div class="col-md-4">
+        <h2>Data Visualization</h2>
+        <p>Data can be visualized using the dashboard tab in the menu above.</p>
+        <h2>Sensors Status</h2>
+{#        <p id="light_status">Lights is</p>#}
+        <!-- <p><a class="btn btn-default" href="http://azure.microsoft.com">Learn more &raquo;</a></p> -->
+    </div>
+</div>
+
+{% endblock %}
