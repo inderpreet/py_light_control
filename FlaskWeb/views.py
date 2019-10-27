@@ -98,21 +98,26 @@ def porchlight_route(a_id, pin_state):
     :return:
     """
     global sensor_states
-    print("Current Light " + a_id + " is " + pin_state)
+    print ( 30 * '-' )
+    print ( "Received Request for: Light " + a_id + " and state " + pin_state)
     if int(a_id) == 1:
         if sensor_states['light1']:
+            print ("Setting Light 1 ON")
             return ' HIGH'
         else:
-            print('PorchLight is OFF')
+            print ("Setting Light 1 OFF")
             return ' LOW'
 
     elif int(a_id) == 2:
         if sensor_states['light2']:
+            print ("Setting Light 2 ON")
             return ' HIGH'
         else:
-            print('PorchLight is OFF')
+            print ("Setting Light 2 ON")
             return ' LOW'
     else:
+            print ("Default: Sending LOW")
+        print (30 * '-')
         return ' LOW'
 
 
