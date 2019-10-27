@@ -112,7 +112,7 @@ def porchlight_route(a_id, pin_state):
             print("Setting Light 2 ON")
             return ' HIGH'
         else:
-            print("Setting Light 2 ON")
+            print("Setting Light 2 OFF")
             return ' LOW'
     else:
         print("Default: Sending LOW")
