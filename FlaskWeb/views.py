@@ -9,7 +9,6 @@ from FlaskWeb import app, socketio
 import html
 from flask_socketio import SocketIO, send
 
-
 # from FlaskWeb.socket_io import update_user_page
 
 # using a dictionary and no history
@@ -98,27 +97,27 @@ def porchlight_route(a_id, pin_state):
     :return:
     """
     global sensor_states
-    print ( 30 * '-' )
-    print ( "Received Request for: Light " + a_id + " and state " + pin_state)
+    print(30 * '-')
+    print("Received Request for: Light " + a_id + " and state " + pin_state)
     if int(a_id) == 1:
         if sensor_states['light1']:
-            print ("Setting Light 1 ON")
+            print("Setting Light 1 ON")
             return ' HIGH'
         else:
-            print ("Setting Light 1 OFF")
+            print("Setting Light 1 OFF")
             return ' LOW'
 
     elif int(a_id) == 2:
         if sensor_states['light2']:
-            print ("Setting Light 2 ON")
+            print("Setting Light 2 ON")
             return ' HIGH'
         else:
-            print ("Setting Light 2 ON")
+            print("Setting Light 2 ON")
             return ' LOW'
     else:
-            print ("Default: Sending LOW")
-        print (30 * '-')
-        return ' LOW'
+        print("Default: Sending LOW")
+    print(30 * '-')
+    return ' LOW'
 
 
 @app.route('/api/rest/pir/<a_id>/<count>', methods=["GET"])
@@ -139,5 +138,5 @@ def mag_data(id, count):
 
 @app.route('/api/rest/doorbell/<id>/<count>', methods=["GET"])
 def doorbell_route(id, count):
-    print('Doorbell Pressed '+id+' count '+count)
+    print('Doorbell Pressed ' + id + ' count ' + count)
     return ' ACK'
